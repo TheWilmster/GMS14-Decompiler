@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="GMS 1.4 Decompiler/GMS 1.4 Decompiler.csproj" />
+  <Project Path="Underanalyzer/Underanalyzer/Underanalyzer.csproj" />
+  <Project Path="UndertaleModLib/UndertaleModLib.csproj" />
+</Solution>
