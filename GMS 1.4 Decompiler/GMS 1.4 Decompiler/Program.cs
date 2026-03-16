@@ -17,13 +17,14 @@ public class DecompilerConfig
     public bool exportSounds { get; set; }
     public bool exportSprites { get; set; }
     public bool exportScripts { get; set; }
-
+    public bool exportBackgrounds { get; set; }
     public DecompilerConfig()
     {
-        dataFilePath = "C:\\Users\\wcoop\\Documents\\pizzatowerdemobuildspublic\\Public\\pizzatowerearlybuildtest_v211\\data.win";
+        dataFilePath = "C:\\Users\\Owner\\Documents\\pizza-tower-builds\\Public\\[2018-07-16][1] pizzatowerearlybuildtest_v211\\data.win";
         exportSounds = true;
         exportSprites = true;
         exportScripts = true;
+        exportBackgrounds = true;
     }
 }
 
@@ -63,6 +64,7 @@ static class Program
         if (config.exportSounds) decompiler.DumpSounds();
         if (config.exportSprites) decompiler.DumpSprites();
         if (config.exportScripts) decompiler.DumpScripts();
+        if (config.exportBackgrounds) decompiler.DumpBackgrounds();
     }
 }
 
@@ -85,7 +87,7 @@ public class GmxAssetBackground
     public uint tileYoffset { get; set; }
 
     [XmlElement("tilehsep")]
-    public uint tileHorziontalSep { get; set; }
+    public uint tileHorizontalSep { get; set; }
 
     [XmlElement("tilevsep")]
     public uint tileVerticalSep { get; set; }
@@ -115,6 +117,25 @@ public class GmxAssetBackground
 
     public GmxAssetBackground(UndertaleBackground resource)
     {
+        isTileset = 0;
+        tileWidth = 32;
+        tileHeight = 32;
+        tileXoffset = 0;
+        tileYoffset = 0;
+        tileHorizontalSep = 0;
+        tileVerticalSep = 0;
+        tileHorizontally = 0;
+        tileVertically = 0;
+        textureGroups = new GmxSpriteTextureGroups(0);
+        for3D = 0;
+        /*if (resource.Texture.TexturePage?.TextureData?.Width == resource.Texture.BoundingWidth &&
+            resource.Texture.TexturePage?.TextureData?.Height == resource.Texture.BoundingHeight)
+        {
+            for3D = -1; // hopefully
+        }*/
+        width = resource.Texture.BoundingWidth;
+        height = resource.Texture.BoundingHeight;
+        path = String.Concat("images\\", resource.Name.Content, ".png");
     }
 }
 
@@ -298,7 +319,7 @@ public class GmxAssetSprite
     public uint height { get; set; }
 
     [XmlArray("frames")]
-    public List<GmxSpriteFrame> frames { get; set; }
+    public List<frame> frames { get; set; }
 
     public GmxAssetSprite() { }
 
@@ -353,7 +374,7 @@ public class GmxSpriteTextureGroups
     }
 }
 
-public class GmxSpriteFrame
+public class frame
 {
     [XmlAttribute(AttributeName = "index")]
     public int index { get; set; }
@@ -361,9 +382,9 @@ public class GmxSpriteFrame
     [XmlText]
     public string path { get; set; }
 
-    public GmxSpriteFrame() { }
+    public frame() { }
 
-    public GmxSpriteFrame(int _index, string _path)
+    public frame(int _index, string _path)
     {
         index = _index;
         path = _path;
@@ -458,6 +479,27 @@ public class Decompiler
         }
     }
 
+    public void DumpBackgrounds()
+    {
+        Console.WriteLine("Dumping Backgrounds...");
+        int i = 0;
+        foreach (UndertaleBackground background in GameData.Backgrounds)
+        {
+            var (_, row) = Console.GetCursorPosition();
+            Console.WriteLine("                                                                                                                             ");
+            Console.SetCursorPosition(0, row);
+
+            (_, row) = Console.GetCursorPosition();
+            Console.WriteLine(String.Concat(
+                "(", i + 1, "/", GameData.Backgrounds.Count, ") Dumping ", background.Name.Content, "..."
+            ));
+            if (i < (GameData.Backgrounds.Count - 1)) Console.SetCursorPosition(0, row);
+
+            DumpBackground(background);
+            i++;
+        }
+    }
+
     public void DumpSprite(UndertaleSprite resource)
     {
         if (resource != null)
@@ -528,6 +570,29 @@ public class Decompiler
             File.WriteAllBytes(String.Concat(audioFilesPath, resource.Name.Content, sound.extension), GetAudioData(resource));
 
             File.WriteAllText(String.Concat(soundsPath, resource.Name.Content, ".sound.gmx"), ToXML(sound));
+        }
+    }
+
+    public void DumpBackground(UndertaleBackground resource)
+    {
+        if (resource != null)
+        {
+            GmxAssetBackground sprite = new GmxAssetBackground(resource);
+
+            TextureWorker worker = new TextureWorker();
+            if (resource.Texture != null)
+            {
+                string imagesPath = String.Concat(DecompilePath, "background\\images\\");
+
+                if (!Directory.Exists(imagesPath))
+                {
+                    Directory.CreateDirectory(imagesPath);
+                }
+
+                worker.ExportAsPNG(resource.Texture, String.Concat(imagesPath, resource.Name.Content, ".png"), null, true);
+            }
+
+            File.WriteAllText(String.Concat(DecompilePath, "background\\", resource.Name.Content, ".background.gmx"), ToXML(sprite));
         }
     }
 

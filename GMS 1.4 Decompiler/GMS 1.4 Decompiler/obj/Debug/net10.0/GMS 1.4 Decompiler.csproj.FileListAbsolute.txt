@@ -40,3 +40,46 @@ C:\Users\wcoop\source\repos\GMS 1.4 Decompiler\GMS 1.4 Decompiler\obj\Debug\net1
 C:\Users\wcoop\source\repos\GMS 1.4 Decompiler\GMS 1.4 Decompiler\obj\Debug\net10.0\GMS 1.4 Decompiler.pdb
 C:\Users\wcoop\source\repos\GMS 1.4 Decompiler\GMS 1.4 Decompiler\obj\Debug\net10.0\GMS 1.4 Decompiler.genruntimeconfig.cache
 C:\Users\wcoop\source\repos\GMS 1.4 Decompiler\GMS 1.4 Decompiler\obj\Debug\net10.0\ref\GMS 1.4 Decompiler.dll
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\obj\Debug\net10.0\GMS 1.4 Decompiler.csproj.AssemblyReference.cache
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\obj\Debug\net10.0\GMS 1.4 Decompiler.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\obj\Debug\net10.0\GMS 1.4 Decompiler.AssemblyInfoInputs.cache
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\obj\Debug\net10.0\GMS 1.4 Decompiler.AssemblyInfo.cs
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\obj\Debug\net10.0\GMS 1.4 Decompiler.csproj.CoreCompileInputs.cache
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\obj\Debug\net10.0\GMS 1.4 Decompiler.sourcelink.json
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\obj\Debug\net10.0\GMS 1.4 Decompiler.dll
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\obj\Debug\net10.0\refint\GMS 1.4 Decompiler.dll
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\obj\Debug\net10.0\GMS 1.4 Decompiler.pdb
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\bin\Debug\net10.0\GameSpecificData\README.txt
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\bin\Debug\net10.0\GameSpecificData\Underanalyzer\deltarune.json
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\bin\Debug\net10.0\GameSpecificData\Underanalyzer\template.json
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\bin\Debug\net10.0\GameSpecificData\Underanalyzer\gamemaker.json
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\bin\Debug\net10.0\GameSpecificData\Underanalyzer\undertale.json
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\bin\Debug\net10.0\GameSpecificData\Definitions\deltarune.json
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\bin\Debug\net10.0\GameSpecificData\Definitions\gamemaker.json
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\bin\Debug\net10.0\GameSpecificData\Definitions\undertale.json
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\bin\Debug\net10.0\GMS 1.4 Decompiler.exe
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\bin\Debug\net10.0\GMS 1.4 Decompiler.deps.json
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\bin\Debug\net10.0\GMS 1.4 Decompiler.runtimeconfig.json
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\bin\Debug\net10.0\GMS 1.4 Decompiler.dll
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\bin\Debug\net10.0\GMS 1.4 Decompiler.pdb
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\bin\Debug\net10.0\FFMpegCore.dll
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\bin\Debug\net10.0\Instances.dll
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\bin\Debug\net10.0\Magick.NET-Q8-AnyCPU.dll
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\bin\Debug\net10.0\Magick.NET.Core.dll
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\bin\Debug\net10.0\PropertyChanged.dll
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\bin\Debug\net10.0\ICSharpCode.SharpZipLib.dll
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\bin\Debug\net10.0\runtimes\linux-arm64\native\Magick.Native-Q8-arm64.dll.so
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\bin\Debug\net10.0\runtimes\linux-musl-x64\native\Magick.Native-Q8-x64.dll.so
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\bin\Debug\net10.0\runtimes\linux-x64\native\Magick.Native-Q8-x64.dll.so
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\bin\Debug\net10.0\runtimes\osx-arm64\native\Magick.Native-Q8-arm64.dll.dylib
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\bin\Debug\net10.0\runtimes\osx-x64\native\Magick.Native-Q8-x64.dll.dylib
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\bin\Debug\net10.0\runtimes\win-arm64\native\Magick.Native-Q8-arm64.dll
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\bin\Debug\net10.0\runtimes\win-x64\native\Magick.Native-Q8-x64.dll
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\bin\Debug\net10.0\runtimes\win-x86\native\Magick.Native-Q8-x86.dll
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\bin\Debug\net10.0\Underanalyzer.dll
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\bin\Debug\net10.0\UndertaleModLib.dll
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\bin\Debug\net10.0\Underanalyzer.pdb
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\bin\Debug\net10.0\UndertaleModLib.xml
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\obj\Debug\net10.0\GMS 1.4 .DE8B5EC7.Up2Date
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\obj\Debug\net10.0\GMS 1.4 Decompiler.genruntimeconfig.cache
+C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\GMS 1.4 Decompiler\obj\Debug\net10.0\ref\GMS 1.4 Decompiler.dll

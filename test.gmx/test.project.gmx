@@ -14,7 +14,9 @@
   <backgrounds name="background">
     <background>background\why_are_these_seperate_fucking_assets</background>
   </backgrounds>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\yawn</path>
+  </paths>
   <scripts name="scripts">
     <script>scripts\script0.gml</script>
   </scripts>

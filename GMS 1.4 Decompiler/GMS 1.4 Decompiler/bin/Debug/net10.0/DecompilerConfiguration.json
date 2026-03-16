@@ -1,6 +1,7 @@
 {
-  "dataFilePath": "C:\\Users\\wcoop\\Documents\\pizzatowerdemobuildspublic\\Public\\pizzatowerearlybuildtest_v211\\data.win",
+  "dataFilePath": "C:\\Users\\Owner\\Documents\\pizza-tower-builds\\Public\\[2018-07-16][1] pizzatowerearlybuildtest_v211\\data.win",
   "exportSounds": true,
   "exportSprites": true,
-  "exportScripts": true
+  "exportScripts": true,
+  "exportBackgrounds": true
 }

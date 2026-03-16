@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\wcoop\\source\\repos\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj": {}
+    "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj": {}
   },
   "projects": {
-    "C:\\Users\\wcoop\\source\\repos\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj": {
+    "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wcoop\\source\\repos\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj",
+        "projectUniqueName": "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj",
         "projectName": "GMS 1.4 Decompiler",
-        "projectPath": "C:\\Users\\wcoop\\source\\repos\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj",
-        "packagesPath": "C:\\Users\\wcoop\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wcoop\\source\\repos\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler\\obj\\",
+        "projectPath": "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj",
+        "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\wcoop\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,11 +28,11 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\wcoop\\source\\repos\\GMS 1.4 Decompiler\\Underanalyzer\\Underanalyzer\\Underanalyzer.csproj": {
-                "projectPath": "C:\\Users\\wcoop\\source\\repos\\GMS 1.4 Decompiler\\Underanalyzer\\Underanalyzer\\Underanalyzer.csproj"
+              "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\Underanalyzer\\Underanalyzer\\Underanalyzer.csproj": {
+                "projectPath": "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\Underanalyzer\\Underanalyzer\\Underanalyzer.csproj"
               },
-              "C:\\Users\\wcoop\\source\\repos\\GMS 1.4 Decompiler\\UndertaleModLib\\UndertaleModLib.csproj": {
-                "projectPath": "C:\\Users\\wcoop\\source\\repos\\GMS 1.4 Decompiler\\UndertaleModLib\\UndertaleModLib.csproj"
+              "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\UndertaleModLib\\UndertaleModLib.csproj": {
+                "projectPath": "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\UndertaleModLib\\UndertaleModLib.csproj"
               }
             }
           }
@@ -78,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -356,22 +352,18 @@
         }
       }
     },
-    "C:\\Users\\wcoop\\source\\repos\\GMS 1.4 Decompiler\\Underanalyzer\\Underanalyzer\\Underanalyzer.csproj": {
+    "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\Underanalyzer\\Underanalyzer\\Underanalyzer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wcoop\\source\\repos\\GMS 1.4 Decompiler\\Underanalyzer\\Underanalyzer\\Underanalyzer.csproj",
+        "projectUniqueName": "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\Underanalyzer\\Underanalyzer\\Underanalyzer.csproj",
         "projectName": "Underanalyzer",
-        "projectPath": "C:\\Users\\wcoop\\source\\repos\\GMS 1.4 Decompiler\\Underanalyzer\\Underanalyzer\\Underanalyzer.csproj",
-        "packagesPath": "C:\\Users\\wcoop\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wcoop\\source\\repos\\GMS 1.4 Decompiler\\Underanalyzer\\Underanalyzer\\obj\\",
+        "projectPath": "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\Underanalyzer\\Underanalyzer\\Underanalyzer.csproj",
+        "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\Underanalyzer\\Underanalyzer\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\wcoop\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -429,7 +421,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -729,7 +721,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201\\RuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200\\RuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.Win32.Primitives": "(,4.3.0]",
             "System.AppContext": "(,4.3.0]",
@@ -838,21 +830,17 @@
         }
       }
     },
-    "C:\\Users\\wcoop\\source\\repos\\GMS 1.4 Decompiler\\UndertaleModLib\\UndertaleModLib.csproj": {
+    "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\UndertaleModLib\\UndertaleModLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wcoop\\source\\repos\\GMS 1.4 Decompiler\\UndertaleModLib\\UndertaleModLib.csproj",
+        "projectUniqueName": "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\UndertaleModLib\\UndertaleModLib.csproj",
         "projectName": "UndertaleModLib",
-        "projectPath": "C:\\Users\\wcoop\\source\\repos\\GMS 1.4 Decompiler\\UndertaleModLib\\UndertaleModLib.csproj",
-        "packagesPath": "C:\\Users\\wcoop\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wcoop\\source\\repos\\GMS 1.4 Decompiler\\UndertaleModLib\\obj\\",
+        "projectPath": "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\UndertaleModLib\\UndertaleModLib.csproj",
+        "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\UndertaleModLib\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\wcoop\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -866,8 +854,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\wcoop\\source\\repos\\GMS 1.4 Decompiler\\Underanalyzer\\Underanalyzer\\Underanalyzer.csproj": {
-                "projectPath": "C:\\Users\\wcoop\\source\\repos\\GMS 1.4 Decompiler\\Underanalyzer\\Underanalyzer\\Underanalyzer.csproj"
+              "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\Underanalyzer\\Underanalyzer\\Underanalyzer.csproj": {
+                "projectPath": "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\Underanalyzer\\Underanalyzer\\Underanalyzer.csproj"
               }
             }
           }
@@ -921,31 +909,27 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
-              "version": "[10.0.5, 10.0.5]"
+              "version": "[10.0.4, 10.0.4]"
             },
             {
               "name": "Microsoft.AspNetCore.App.Runtime.win-x86",
-              "version": "[10.0.5, 10.0.5]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x86",
-              "version": "[10.0.5, 10.0.5]"
+              "version": "[10.0.4, 10.0.4]"
             },
             {
               "name": "Microsoft.NETCore.App.Runtime.win-x64",
-              "version": "[10.0.5, 10.0.5]"
+              "version": "[10.0.4, 10.0.4]"
             },
             {
               "name": "Microsoft.NETCore.App.Runtime.win-x86",
-              "version": "[10.0.5, 10.0.5]"
+              "version": "[10.0.4, 10.0.4]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
-              "version": "[10.0.5, 10.0.5]"
+              "version": "[10.0.4, 10.0.4]"
             },
             {
               "name": "Microsoft.WindowsDesktop.App.Runtime.win-x86",
-              "version": "[10.0.5, 10.0.5]"
+              "version": "[10.0.4, 10.0.4]"
             }
           ],
           "frameworkReferences": {
@@ -953,7 +937,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
