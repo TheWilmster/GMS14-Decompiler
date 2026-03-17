@@ -1,1 +1,0 @@
-gurt = "gurt gurt gurt!"
