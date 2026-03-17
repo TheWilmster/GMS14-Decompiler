@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GMS 1.4 Decompiler")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e039dbcf34d01759c6622047d9ded4a17abea6c9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+14088310d257628d66f9472734b280591fbe969e")]
 [assembly: System.Reflection.AssemblyProductAttribute("GMS 1.4 Decompiler")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GMS 1.4 Decompiler")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -8,6 +8,7 @@ using System.Text;
 using System.Text.Json;
 using System.Xml;
 using System.Xml.Serialization;
+using System.Drawing;
 using UndertaleModLib;
 using UndertaleModLib.Decompiler;
 using UndertaleModLib.Models;
@@ -168,7 +169,7 @@ public class GmxAssetProject
 
         foreach (UndertaleSound sound in decompiler.GameData.Sounds)
         {
-            sounds.sounds.Add(String.Concat("sounds\\", sound.Name.Content));
+            sounds.sounds.Add(String.Concat("sound\\", sound.Name.Content));
         }
 
         foreach (UndertaleSprite sprite in decompiler.GameData.Sprites)
@@ -194,7 +195,7 @@ public class GmxAssetProject
         foreach (UndertaleShader shader in decompiler.GameData.Shaders)
         {
             GmxProjectShader xmlShader = new GmxProjectShader();
-            xmlShader.path = String.Concat("shaders\\", shader.Name.Content);
+            xmlShader.path = String.Concat("shaders\\", shader.Name.Content, ".shader");
             xmlShader.type = shader.Type switch
             {
                 UndertaleShader.ShaderType.GLSL_ES => "GLSLES",
@@ -267,8 +268,8 @@ public class GmxProjectDatafile
     [XmlElement("size")]
     public long fileSize { get; set; }
 
-    [XmlElement("exportActions")]
-    public uint exportActions { get; set; }
+    [XmlElement("exportAction")]
+    public uint exportAction { get; set; }
 
     [XmlElement("exportDir")]
     public string exportDir { get; set; }
@@ -298,7 +299,7 @@ public class GmxProjectDatafile
         fileName = _fileName;
         fileExists = -1;
         fileSize = _fileSize;
-        exportActions = 2;
+        exportAction = 2;
         exportDir = String.Empty;
         overwrite = 0;
         freeData = -1;
@@ -345,7 +346,7 @@ public class GmxProjectSounds
 
     public GmxProjectSounds()
     {
-        name = "sounds";
+        name = "sound";
         sounds = new List<string>();
     }
 }
@@ -420,7 +421,7 @@ public class GmxProjectShaders
 
     public GmxProjectShaders()
     {
-        name = "fonts";
+        name = "shaders";
         shaders = new List<GmxProjectShader>();
     }
 }
@@ -495,14 +496,15 @@ public class GmxProjectTutorialState
     [XmlElement("IsTutorial")]
     public int isTutorial { get; set; }
     [XmlElement("TutorialName")]
-    public string tutorialName { get; set; }
+    public GmxBetterString tutorialName { get; set; }
     [XmlElement("TutorialPage")]
     public int tutorialPage { get; set; }
 
     public GmxProjectTutorialState()
     {
         isTutorial = 0;
-        tutorialName = String.Empty;
+        tutorialName ??= new GmxBetterString();
+        tutorialName.text = String.Empty;
         tutorialPage = 0;
     }
 }
@@ -511,7 +513,7 @@ public class GmxProjectTutorialState
 public class GmxAssetRoom
 {
     [XmlElement("caption")]
-    public GmxRoomCaption caption { get; set; }
+    public GmxBetterString caption { get; set; }
 
     [XmlElement("width")]
     public uint width { get; set; }
@@ -541,7 +543,7 @@ public class GmxAssetRoom
     public int showColour { get; set; }
 
     [XmlElement("code")]
-    public GmxRoomCode code { get; set; }
+    public GmxBetterString code { get; set; }
 
     [XmlElement("enableViews")]
     public int enableViews { get; set; }
@@ -595,8 +597,8 @@ public class GmxAssetRoom
 
     public GmxAssetRoom(UndertaleRoom resource, Decompiler decompiler)
     {
-        caption ??= new GmxRoomCaption();
-        caption.caption = resource.Caption.Content ?? "";
+        caption ??= new GmxBetterString();
+        caption.text = resource.Caption.Content ?? "";
         width = resource.Width;
         height = resource.Height;
         verticalSnap = 16;
@@ -604,13 +606,22 @@ public class GmxAssetRoom
         isometric = 0;
         speed = resource.Speed;
         persistent = -Convert.ToInt32(resource.Persistent);
-        colour = resource.BackgroundColor;
+
+        // convert from android color code (gms2) to decimal color code (gms1)
+        string androidHexColor = resource.BackgroundColor.ToString("X");
+
+        //double alpha = double.Parse(androidHexColor.Substring(0, 2), System.Globalization.NumberStyles.HexNumber);
+        uint red = uint.Parse(androidHexColor.Substring(2, 2), System.Globalization.NumberStyles.HexNumber);
+        uint green = uint.Parse(androidHexColor.Substring(4, 2), System.Globalization.NumberStyles.HexNumber);
+        uint blue = uint.Parse(androidHexColor.Substring(6, 2), System.Globalization.NumberStyles.HexNumber);
+        double decimalCol = ((double)red * System.Math.Pow(256, 2)) + ((double)green * System.Math.Pow(256, 1)) + (double)blue;
+        colour = (uint)decimalCol;
         showColour = -Convert.ToInt32(resource.DrawBackgroundColor);
 
         GlobalDecompileContext globalDecompileContext = new(decompiler.GameData);
         Underanalyzer.Decompiler.IDecompileSettings decompilerSettings = decompiler.GameData.ToolInfo.DecompilerSettings;
-        code ??= new GmxRoomCode();
-        code.code = resource.CreationCodeId != null ?
+        code ??= new GmxBetterString();
+        code.text = resource.CreationCodeId != null ?
                         new Underanalyzer.Decompiler.DecompileContext(globalDecompileContext, resource.CreationCodeId, decompilerSettings).DecompileToString() :
                         "";
         enableViews = -Convert.ToInt32(resource.Flags.HasFlag(UndertaleRoom.RoomEntryFlags.EnableViews));
@@ -713,23 +724,12 @@ public class GmxAssetRoom
     }
 }
 
-public class GmxRoomCaption
+public class GmxBetterString
 {
     [XmlText]
-    public string caption { get; set; }
+    public string text { get; set; }
 
-    public GmxRoomCaption()
-    {
-
-    }
-}
-
-public class GmxRoomCode
-{
-    [XmlText]
-    public string code { get; set; }
-
-    public GmxRoomCode()
+    public GmxBetterString()
     {
 
     }
@@ -2004,7 +2004,7 @@ public class Decompiler
         foreach (string file in Directory.GetFiles(Path.GetDirectoryName(GamePath)))
         {
             string trimmed_file = Path.GetFileName(file);
-            if (externalSoundNames == null || !externalSoundNames.Contains(trimmed_file) && !String.Equals(trimmed_file, "D3DX9_43.dll") && !String.Equals(trimmed_file, "data.win") && !String.Equals(trimmed_file, "options.ini") && !String.Equals(trimmed_file, GameData.GeneralInfo.FileName + ".exe"))
+            if ((externalSoundNames == null || !externalSoundNames.Contains(trimmed_file)) && !String.Equals(trimmed_file, "D3DX9_43.dll") && !String.Equals(trimmed_file, "data.win") && !String.Equals(trimmed_file, "options.ini") && !String.Equals(trimmed_file, GameData.GeneralInfo.FileName))
             {
                 filteredFiles.Add(trimmed_file);
             }
@@ -2079,6 +2079,8 @@ public class Decompiler
             {
                 Directory.CreateDirectory(audioFilesPath);
             }
+            externalSoundNames ??= new List<string>();
+
             if (!resource.Flags.HasFlag(UndertaleSound.AudioEntryFlags.IsEmbedded))
             {
                 string filename = resource.File.Content;
@@ -2089,10 +2091,6 @@ public class Decompiler
                 string sourcePath = Path.Combine(Path.GetDirectoryName(GamePath), filename);
                 if (File.Exists(sourcePath))
                 {
-                    if (externalSoundNames == null)
-                    {
-                        externalSoundNames = new List<string>();
-                    }
                     externalSoundNames.Add(filename);
                     if (!getExternalSoundNamesOnly)
                     {

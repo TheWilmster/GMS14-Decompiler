@@ -6,7 +6,7 @@
     <authors>UndertaleModLib</authors>
     <description>Package Description</description>
     <copyright>Copyright ©  2018-2026, licensed under GPLv3</copyright>
-    <repository type="git" commit="e039dbcf34d01759c6622047d9ded4a17abea6c9" />
+    <repository type="git" commit="14088310d257628d66f9472734b280591fbe969e" />
     <dependencies>
       <group targetFramework="net10.0">
         <dependency id="Underanalyzer" version="1.0.0" exclude="Build,Analyzers" />
@@ -27,23 +27,23 @@
     </contentFiles>
   </metadata>
   <files>
-    <file src="C:\Users\wcoop\Documents\GitHub\GMS14 Decompiler\GMS 1.4 Decompiler\UndertaleModLib\bin\Debug\net10.0\UndertaleModLib.dll" target="lib\net10.0\UndertaleModLib.dll" />
-    <file src="C:\Users\wcoop\Documents\GitHub\GMS14 Decompiler\GMS 1.4 Decompiler\UndertaleModLib\bin\Debug\net10.0\UndertaleModLib.xml" target="lib\net10.0\UndertaleModLib.xml" />
-    <file src="C:\Users\wcoop\Documents\GitHub\GMS14 Decompiler\GMS 1.4 Decompiler\UndertaleModLib\GameSpecificData\README.txt" target="content\GameSpecificData\README.txt" />
-    <file src="C:\Users\wcoop\Documents\GitHub\GMS14 Decompiler\GMS 1.4 Decompiler\UndertaleModLib\GameSpecificData\README.txt" target="contentFiles\any\net10.0\GameSpecificData\README.txt" />
-    <file src="C:\Users\wcoop\Documents\GitHub\GMS14 Decompiler\GMS 1.4 Decompiler\UndertaleModLib\GameSpecificData\Underanalyzer\deltarune.json" target="content\GameSpecificData\Underanalyzer\deltarune.json" />
-    <file src="C:\Users\wcoop\Documents\GitHub\GMS14 Decompiler\GMS 1.4 Decompiler\UndertaleModLib\GameSpecificData\Underanalyzer\deltarune.json" target="contentFiles\any\net10.0\GameSpecificData\Underanalyzer\deltarune.json" />
-    <file src="C:\Users\wcoop\Documents\GitHub\GMS14 Decompiler\GMS 1.4 Decompiler\UndertaleModLib\GameSpecificData\Underanalyzer\template.json" target="content\GameSpecificData\Underanalyzer\template.json" />
-    <file src="C:\Users\wcoop\Documents\GitHub\GMS14 Decompiler\GMS 1.4 Decompiler\UndertaleModLib\GameSpecificData\Underanalyzer\template.json" target="contentFiles\any\net10.0\GameSpecificData\Underanalyzer\template.json" />
-    <file src="C:\Users\wcoop\Documents\GitHub\GMS14 Decompiler\GMS 1.4 Decompiler\UndertaleModLib\GameSpecificData\Underanalyzer\gamemaker.json" target="content\GameSpecificData\Underanalyzer\gamemaker.json" />
-    <file src="C:\Users\wcoop\Documents\GitHub\GMS14 Decompiler\GMS 1.4 Decompiler\UndertaleModLib\GameSpecificData\Underanalyzer\gamemaker.json" target="contentFiles\any\net10.0\GameSpecificData\Underanalyzer\gamemaker.json" />
-    <file src="C:\Users\wcoop\Documents\GitHub\GMS14 Decompiler\GMS 1.4 Decompiler\UndertaleModLib\GameSpecificData\Underanalyzer\undertale.json" target="content\GameSpecificData\Underanalyzer\undertale.json" />
-    <file src="C:\Users\wcoop\Documents\GitHub\GMS14 Decompiler\GMS 1.4 Decompiler\UndertaleModLib\GameSpecificData\Underanalyzer\undertale.json" target="contentFiles\any\net10.0\GameSpecificData\Underanalyzer\undertale.json" />
-    <file src="C:\Users\wcoop\Documents\GitHub\GMS14 Decompiler\GMS 1.4 Decompiler\UndertaleModLib\GameSpecificData\Definitions\deltarune.json" target="content\GameSpecificData\Definitions\deltarune.json" />
-    <file src="C:\Users\wcoop\Documents\GitHub\GMS14 Decompiler\GMS 1.4 Decompiler\UndertaleModLib\GameSpecificData\Definitions\deltarune.json" target="contentFiles\any\net10.0\GameSpecificData\Definitions\deltarune.json" />
-    <file src="C:\Users\wcoop\Documents\GitHub\GMS14 Decompiler\GMS 1.4 Decompiler\UndertaleModLib\GameSpecificData\Definitions\gamemaker.json" target="content\GameSpecificData\Definitions\gamemaker.json" />
-    <file src="C:\Users\wcoop\Documents\GitHub\GMS14 Decompiler\GMS 1.4 Decompiler\UndertaleModLib\GameSpecificData\Definitions\gamemaker.json" target="contentFiles\any\net10.0\GameSpecificData\Definitions\gamemaker.json" />
-    <file src="C:\Users\wcoop\Documents\GitHub\GMS14 Decompiler\GMS 1.4 Decompiler\UndertaleModLib\GameSpecificData\Definitions\undertale.json" target="content\GameSpecificData\Definitions\undertale.json" />
-    <file src="C:\Users\wcoop\Documents\GitHub\GMS14 Decompiler\GMS 1.4 Decompiler\UndertaleModLib\GameSpecificData\Definitions\undertale.json" target="contentFiles\any\net10.0\GameSpecificData\Definitions\undertale.json" />
+    <file src="C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\UndertaleModLib\bin\Debug\net10.0\UndertaleModLib.dll" target="lib\net10.0\UndertaleModLib.dll" />
+    <file src="C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\UndertaleModLib\bin\Debug\net10.0\UndertaleModLib.xml" target="lib\net10.0\UndertaleModLib.xml" />
+    <file src="C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\UndertaleModLib\GameSpecificData\README.txt" target="content\GameSpecificData\README.txt" />
+    <file src="C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\UndertaleModLib\GameSpecificData\README.txt" target="contentFiles\any\net10.0\GameSpecificData\README.txt" />
+    <file src="C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\UndertaleModLib\GameSpecificData\Underanalyzer\deltarune.json" target="content\GameSpecificData\Underanalyzer\deltarune.json" />
+    <file src="C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\UndertaleModLib\GameSpecificData\Underanalyzer\deltarune.json" target="contentFiles\any\net10.0\GameSpecificData\Underanalyzer\deltarune.json" />
+    <file src="C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\UndertaleModLib\GameSpecificData\Underanalyzer\template.json" target="content\GameSpecificData\Underanalyzer\template.json" />
+    <file src="C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\UndertaleModLib\GameSpecificData\Underanalyzer\template.json" target="contentFiles\any\net10.0\GameSpecificData\Underanalyzer\template.json" />
+    <file src="C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\UndertaleModLib\GameSpecificData\Underanalyzer\gamemaker.json" target="content\GameSpecificData\Underanalyzer\gamemaker.json" />
+    <file src="C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\UndertaleModLib\GameSpecificData\Underanalyzer\gamemaker.json" target="contentFiles\any\net10.0\GameSpecificData\Underanalyzer\gamemaker.json" />
+    <file src="C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\UndertaleModLib\GameSpecificData\Underanalyzer\undertale.json" target="content\GameSpecificData\Underanalyzer\undertale.json" />
+    <file src="C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\UndertaleModLib\GameSpecificData\Underanalyzer\undertale.json" target="contentFiles\any\net10.0\GameSpecificData\Underanalyzer\undertale.json" />
+    <file src="C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\UndertaleModLib\GameSpecificData\Definitions\deltarune.json" target="content\GameSpecificData\Definitions\deltarune.json" />
+    <file src="C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\UndertaleModLib\GameSpecificData\Definitions\deltarune.json" target="contentFiles\any\net10.0\GameSpecificData\Definitions\deltarune.json" />
+    <file src="C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\UndertaleModLib\GameSpecificData\Definitions\gamemaker.json" target="content\GameSpecificData\Definitions\gamemaker.json" />
+    <file src="C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\UndertaleModLib\GameSpecificData\Definitions\gamemaker.json" target="contentFiles\any\net10.0\GameSpecificData\Definitions\gamemaker.json" />
+    <file src="C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\UndertaleModLib\GameSpecificData\Definitions\undertale.json" target="content\GameSpecificData\Definitions\undertale.json" />
+    <file src="C:\Users\Owner\Documents\GitHub\GMS14-Decompiler\GMS 1.4 Decompiler\UndertaleModLib\GameSpecificData\Definitions\undertale.json" target="contentFiles\any\net10.0\GameSpecificData\Definitions\undertale.json" />
   </files>
 </package>
