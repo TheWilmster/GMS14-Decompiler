@@ -1,7 +1,14 @@
 {
-  "dataFilePath": "C:\\Users\\Owner\\Documents\\pizza-tower-builds\\Public\\[2018-07-16][1] pizzatowerearlybuildtest_v211\\data.win",
+  "dataFilePath": "C:\\Users\\wcoop\\Documents\\test\\data.win",
   "exportSounds": true,
   "exportSprites": true,
   "exportScripts": true,
-  "exportBackgrounds": true
+  "exportBackgrounds": true,
+  "exportPaths": true,
+  "exportShaders": true,
+  "bypassShaderType": null,
+  "exportFonts": true,
+  "exportObjects": true,
+  "exportRooms": true,
+  "exportProjectAndIncludedFiles": true
 }

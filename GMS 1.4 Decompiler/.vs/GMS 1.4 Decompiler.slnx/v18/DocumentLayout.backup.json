@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\",
+  "WorkspaceRootPath": "C:\\Users\\wcoop\\Documents\\GitHub\\GMS14 Decompiler\\GMS 1.4 Decompiler\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E6450624-C525-B14F-A3F5-1B48B7EB5B93}|GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj|c:\\users\\owner\\documents\\github\\gms14-decompiler\\gms 1.4 decompiler\\gms 1.4 decompiler\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E6450624-C525-B14F-A3F5-1B48B7EB5B93}|GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj|c:\\users\\wcoop\\documents\\github\\gms14 decompiler\\gms 1.4 decompiler\\gms 1.4 decompiler\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6450624-C525-B14F-A3F5-1B48B7EB5B93}|GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj|solutionrelative:gms 1.4 decompiler\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -23,11 +23,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\wcoop\\Documents\\GitHub\\GMS14 Decompiler\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler\\Program.cs",
               "RelativeDocumentMoniker": "GMS 1.4 Decompiler\\Program.cs",
-              "ToolTip": "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler\\Program.cs",
+              "ToolTip": "C:\\Users\\wcoop\\Documents\\GitHub\\GMS14 Decompiler\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler\\Program.cs",
               "RelativeToolTip": "GMS 1.4 Decompiler\\Program.cs",
-              "ViewState": "AgIAAGYBAAAAAAAAAAAnwHgBAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAMAHAAAAAAAAAAAawMsHAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-15T02:44:55.485Z",
               "IsPinned": true,
@@ -38,9 +38,9 @@
               "DocumentIndex": 1,
               "Title": "README.md",
               "DocumentMoniker": "C:\\Users\\wcoop\\.nuget\\packages\\ffmpegcore\\5.4.0\\README.md",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\wcoop\\.nuget\\packages\\ffmpegcore\\5.4.0\\README.md",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\.nuget\\packages\\ffmpegcore\\5.4.0\\README.md",
               "ToolTip": "C:\\Users\\wcoop\\.nuget\\packages\\ffmpegcore\\5.4.0\\README.md [Read Only]",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\wcoop\\.nuget\\packages\\ffmpegcore\\5.4.0\\README.md [Read Only]",
+              "RelativeToolTip": "..\\..\\..\\..\\.nuget\\packages\\ffmpegcore\\5.4.0\\README.md [Read Only]",
               "ViewState": "AgIAAMwAAAAAAAAAAAAAAOEAAAAAAAAAAQAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
               "WhenOpened": "2026-03-16T02:55:33.432Z",
