@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "kiJpyqCK+EQ=",
+  "dgSpecHash": "gwq2zng/22o=",
   "success": true,
   "projectFilePath": "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\UndertaleModLib\\UndertaleModLib.csproj",
   "expectedPackageFiles": [
@@ -9,12 +9,12 @@
     "C:\\Users\\Owner\\.nuget\\packages\\magick.net.core\\14.10.2\\magick.net.core.14.10.2.nupkg.sha512",
     "C:\\Users\\Owner\\.nuget\\packages\\propertychanged.fody\\4.1.0\\propertychanged.fody.4.1.0.nupkg.sha512",
     "C:\\Users\\Owner\\.nuget\\packages\\sharpziplib\\1.4.2\\sharpziplib.1.4.2.nupkg.sha512",
-    "C:\\Users\\Owner\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\10.0.4\\microsoft.netcore.app.runtime.win-x86.10.0.4.nupkg.sha512",
-    "C:\\Users\\Owner\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\10.0.4\\microsoft.aspnetcore.app.runtime.win-x86.10.0.4.nupkg.sha512",
-    "C:\\Users\\Owner\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\10.0.4\\microsoft.aspnetcore.app.runtime.win-x64.10.0.4.nupkg.sha512",
-    "C:\\Users\\Owner\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\10.0.4\\microsoft.windowsdesktop.app.runtime.win-x64.10.0.4.nupkg.sha512",
-    "C:\\Users\\Owner\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\10.0.4\\microsoft.netcore.app.runtime.win-x64.10.0.4.nupkg.sha512",
-    "C:\\Users\\Owner\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\10.0.4\\microsoft.windowsdesktop.app.runtime.win-x86.10.0.4.nupkg.sha512"
+    "C:\\Users\\Owner\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\10.0.5\\microsoft.netcore.app.runtime.win-x86.10.0.5.nupkg.sha512",
+    "C:\\Users\\Owner\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\10.0.5\\microsoft.aspnetcore.app.runtime.win-x86.10.0.5.nupkg.sha512",
+    "C:\\Users\\Owner\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\10.0.5\\microsoft.aspnetcore.app.runtime.win-x64.10.0.5.nupkg.sha512",
+    "C:\\Users\\Owner\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\10.0.5\\microsoft.windowsdesktop.app.runtime.win-x64.10.0.5.nupkg.sha512",
+    "C:\\Users\\Owner\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\10.0.5\\microsoft.netcore.app.runtime.win-x64.10.0.5.nupkg.sha512",
+    "C:\\Users\\Owner\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\10.0.5\\microsoft.windowsdesktop.app.runtime.win-x86.10.0.5.nupkg.sha512"
   ],
   "logs": [
     {

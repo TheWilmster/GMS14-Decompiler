@@ -1,6 +1,7 @@
 ﻿using FFMpegCore;
 using ICSharpCode.SharpZipLib.Zip.Compression.Streams;
 using System.IO;
+using System.Net.Security;
 using System.Runtime.CompilerServices;
 using System.Runtime.Serialization;
 using System.Security.Cryptography.X509Certificates;
@@ -8,7 +9,6 @@ using System.Text;
 using System.Text.Json;
 using System.Xml;
 using System.Xml.Serialization;
-using System.Drawing;
 using UndertaleModLib;
 using UndertaleModLib.Decompiler;
 using UndertaleModLib.Models;
@@ -81,14 +81,48 @@ static class Program
             {
                 WriteIndented = true
             }));
-            Console.WriteLine("Restart the program after setting your configurations!");
-            System.Environment.Exit(0);
         }
-
-        //GlobalFFOptions.Configure(options => options.BinaryFolder = String.Concat(config.ffmpegPath + "bin"));
 
         Decompiler decompiler = new Decompiler();
         decompiler.LoadDataFile(config.dataFilePath);
+
+        var (_, startingLine) = Console.GetCursorPosition();
+        Console.WriteLine(String.Concat("  [", config.exportSprites ? "X" "] Dump Sprites (Count: ", decompiler.GameData.Sprites.Count, ")"));
+        Console.WriteLine(String.Concat("  [ ] Dump Sounds (Count: ", decompiler.GameData.Sounds.Count, ")"));
+        Console.WriteLine(String.Concat("  [ ] Dump Backgrounds (Count: ", decompiler.GameData.Backgrounds.Count, ")"));
+        Console.WriteLine(String.Concat("  [ ] Dump Paths (Count: ", decompiler.GameData.Paths.Count, ")"));
+        Console.WriteLine(String.Concat("  [ ] Dump Scripts (Count: ", decompiler.GameData.Scripts.Count, ")"));
+        Console.WriteLine(String.Concat("  [ ] Dump Shaders (Count: ", decompiler.GameData.Shaders.Count, ")"));
+        Console.WriteLine(String.Concat("  [ ] Dump Fonts (Count: ", decompiler.GameData.Fonts.Count, ")"));
+        Console.WriteLine(String.Concat("  [ ] Dump Objects (Count: ", decompiler.GameData.Objects.Count, ")"));
+        Console.WriteLine(String.Concat("  [ ] Dump Rooms (Count: ", decompiler.GameData.Rooms.Count, ")"));
+        Console.WriteLine(String.Concat("  [ ] Copy over Included Files (UNSAFE)");
+
+        bool confirm = false;
+        int select = 0;
+        while (!confirm)
+        {
+            ConsoleKeyInfo keyInfo = Console.ReadKey();
+            int oldSelect = select;
+            select += keyInfo.Key == ConsoleKey.DownArrow ? 1 : keyInfo.Key == ConsoleKey.UpArrow ? -1 : 0;
+            select = int.Clamp(select, 0, 8);
+            if (oldSelect != select)
+            {
+                Console.WriteLine("  ");
+            }
+            Console.SetCursorPosition(3, startingLine + select);
+            Console.WriteLine("->");
+
+            if (keyInfo.Key == ConsoleKey.Spacebar)
+            {
+                switch (select)
+                {
+                    case 0:
+                        config.exportSprites = !config.exportSprites;
+                        break;
+                }
+            }
+        }
 
         if (config.exportSounds) decompiler.DumpSounds();
         if (config.exportSprites) decompiler.DumpSprites();
@@ -361,6 +395,7 @@ public class Decompiler
             File.Copy(sourcePath, destPath, true);
             i++;
         }
+        datafilesCopied = true;
         Console.WriteLine("Included files done!                                                                                                             ");
     }
 
@@ -758,4 +793,5 @@ public class Decompiler
     public string GamePath;
     public string DecompilePath;
     private List<string> externalSoundNames;
+    public bool datafilesCopied = false;
 }

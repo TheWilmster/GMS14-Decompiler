@@ -7,40 +7,40 @@
       "RelativeMoniker": "D:0:0:{E6450624-C525-B14F-A3F5-1B48B7EB5B93}|GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj|solutionrelative:gms 1.4 decompiler\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E6450624-C525-B14F-A3F5-1B48B7EB5B93}|GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj|c:\\users\\owner\\documents\\github\\gms14-decompiler\\gms 1.4 decompiler\\gms 1.4 decompiler\\gmxextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6450624-C525-B14F-A3F5-1B48B7EB5B93}|GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj|solutionrelative:gms 1.4 decompiler\\gmxextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6450624-C525-B14F-A3F5-1B48B7EB5B93}|GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj|c:\\users\\owner\\documents\\github\\gms14-decompiler\\gms 1.4 decompiler\\gms 1.4 decompiler\\gmxbackground.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6450624-C525-B14F-A3F5-1B48B7EB5B93}|GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj|solutionrelative:gms 1.4 decompiler\\gmxbackground.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E6450624-C525-B14F-A3F5-1B48B7EB5B93}|GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj|c:\\users\\owner\\documents\\github\\gms14-decompiler\\gms 1.4 decompiler\\gms 1.4 decompiler\\gmxproject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6450624-C525-B14F-A3F5-1B48B7EB5B93}|GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj|solutionrelative:gms 1.4 decompiler\\gmxproject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E6450624-C525-B14F-A3F5-1B48B7EB5B93}|GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj|c:\\users\\owner\\documents\\github\\gms14-decompiler\\gms 1.4 decompiler\\gms 1.4 decompiler\\gmxsprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6450624-C525-B14F-A3F5-1B48B7EB5B93}|GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj|solutionrelative:gms 1.4 decompiler\\gmxsprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E6450624-C525-B14F-A3F5-1B48B7EB5B93}|GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj|c:\\users\\owner\\documents\\github\\gms14-decompiler\\gms 1.4 decompiler\\gms 1.4 decompiler\\gmxproject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6450624-C525-B14F-A3F5-1B48B7EB5B93}|GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj|solutionrelative:gms 1.4 decompiler\\gmxproject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E6450624-C525-B14F-A3F5-1B48B7EB5B93}|GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj|c:\\users\\owner\\documents\\github\\gms14-decompiler\\gms 1.4 decompiler\\gms 1.4 decompiler\\gmxroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6450624-C525-B14F-A3F5-1B48B7EB5B93}|GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj|solutionrelative:gms 1.4 decompiler\\gmxroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E6450624-C525-B14F-A3F5-1B48B7EB5B93}|GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj|c:\\users\\owner\\documents\\github\\gms14-decompiler\\gms 1.4 decompiler\\gms 1.4 decompiler\\gmxobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6450624-C525-B14F-A3F5-1B48B7EB5B93}|GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj|solutionrelative:gms 1.4 decompiler\\gmxobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E6450624-C525-B14F-A3F5-1B48B7EB5B93}|GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj|c:\\users\\owner\\documents\\github\\gms14-decompiler\\gms 1.4 decompiler\\gms 1.4 decompiler\\gmxsound.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6450624-C525-B14F-A3F5-1B48B7EB5B93}|GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj|solutionrelative:gms 1.4 decompiler\\gmxsound.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E6450624-C525-B14F-A3F5-1B48B7EB5B93}|GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj|c:\\users\\owner\\documents\\github\\gms14-decompiler\\gms 1.4 decompiler\\gms 1.4 decompiler\\gmxroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6450624-C525-B14F-A3F5-1B48B7EB5B93}|GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj|solutionrelative:gms 1.4 decompiler\\gmxroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E6450624-C525-B14F-A3F5-1B48B7EB5B93}|GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj|c:\\users\\owner\\documents\\github\\gms14-decompiler\\gms 1.4 decompiler\\gms 1.4 decompiler\\gmxfont.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6450624-C525-B14F-A3F5-1B48B7EB5B93}|GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj|solutionrelative:gms 1.4 decompiler\\gmxfont.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E6450624-C525-B14F-A3F5-1B48B7EB5B93}|GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj|c:\\users\\owner\\documents\\github\\gms14-decompiler\\gms 1.4 decompiler\\gms 1.4 decompiler\\gmxpath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E6450624-C525-B14F-A3F5-1B48B7EB5B93}|GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj|solutionrelative:gms 1.4 decompiler\\gmxpath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E6450624-C525-B14F-A3F5-1B48B7EB5B93}|GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj|c:\\users\\owner\\documents\\github\\gms14-decompiler\\gms 1.4 decompiler\\gms 1.4 decompiler\\gmxfont.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6450624-C525-B14F-A3F5-1B48B7EB5B93}|GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj|solutionrelative:gms 1.4 decompiler\\gmxfont.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E6450624-C525-B14F-A3F5-1B48B7EB5B93}|GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj|c:\\users\\owner\\documents\\github\\gms14-decompiler\\gms 1.4 decompiler\\gms 1.4 decompiler\\gmxbackground.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6450624-C525-B14F-A3F5-1B48B7EB5B93}|GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj|solutionrelative:gms 1.4 decompiler\\gmxbackground.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6450624-C525-B14F-A3F5-1B48B7EB5B93}|GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj|c:\\users\\owner\\documents\\github\\gms14-decompiler\\gms 1.4 decompiler\\gms 1.4 decompiler\\gmxsound.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6450624-C525-B14F-A3F5-1B48B7EB5B93}|GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj|solutionrelative:gms 1.4 decompiler\\gmxsound.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6450624-C525-B14F-A3F5-1B48B7EB5B93}|GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj|c:\\users\\owner\\documents\\github\\gms14-decompiler\\gms 1.4 decompiler\\gms 1.4 decompiler\\gmxextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6450624-C525-B14F-A3F5-1B48B7EB5B93}|GMS 1.4 Decompiler\\GMS 1.4 Decompiler.csproj|solutionrelative:gms 1.4 decompiler\\gmxextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\wcoop\\.nuget\\packages\\ffmpegcore\\5.4.0\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
@@ -63,7 +63,7 @@
               "RelativeDocumentMoniker": "GMS 1.4 Decompiler\\Program.cs",
               "ToolTip": "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler\\Program.cs",
               "RelativeToolTip": "GMS 1.4 Decompiler\\Program.cs",
-              "ViewState": "AgIAAGQAAAAAAAAAAAAEwHYAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAgwG8AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-15T02:44:55.485Z",
               "IsPinned": true,
@@ -71,111 +71,117 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "GmxExtension.cs",
               "DocumentMoniker": "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler\\GmxExtension.cs",
               "RelativeDocumentMoniker": "GMS 1.4 Decompiler\\GmxExtension.cs",
               "ToolTip": "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler\\GmxExtension.cs",
               "RelativeToolTip": "GMS 1.4 Decompiler\\GmxExtension.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-18T15:30:34.318Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "GmxSound.cs",
               "DocumentMoniker": "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler\\GmxSound.cs",
               "RelativeDocumentMoniker": "GMS 1.4 Decompiler\\GmxSound.cs",
               "ToolTip": "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler\\GmxSound.cs",
               "RelativeToolTip": "GMS 1.4 Decompiler\\GmxSound.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAMwCUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T02:32:44.582Z"
+              "WhenOpened": "2026-03-18T02:32:44.582Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "GmxBackground.cs",
               "DocumentMoniker": "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler\\GmxBackground.cs",
               "RelativeDocumentMoniker": "GMS 1.4 Decompiler\\GmxBackground.cs",
               "ToolTip": "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler\\GmxBackground.cs",
               "RelativeToolTip": "GMS 1.4 Decompiler\\GmxBackground.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAAAFcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-18T02:31:06.625Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "GmxPath.cs",
               "DocumentMoniker": "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler\\GmxPath.cs",
               "RelativeDocumentMoniker": "GMS 1.4 Decompiler\\GmxPath.cs",
               "ToolTip": "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler\\GmxPath.cs",
               "RelativeToolTip": "GMS 1.4 Decompiler\\GmxPath.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAUwCwAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T02:30:22.342Z"
+              "WhenOpened": "2026-03-18T02:30:22.342Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 5,
               "Title": "GmxFont.cs",
               "DocumentMoniker": "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler\\GmxFont.cs",
               "RelativeDocumentMoniker": "GMS 1.4 Decompiler\\GmxFont.cs",
               "ToolTip": "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler\\GmxFont.cs",
               "RelativeToolTip": "GMS 1.4 Decompiler\\GmxFont.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAYwBkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAYwAkAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T02:26:18.543Z"
+              "WhenOpened": "2026-03-18T02:26:18.543Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "GmxObject.cs",
               "DocumentMoniker": "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler\\GmxObject.cs",
               "RelativeDocumentMoniker": "GMS 1.4 Decompiler\\GmxObject.cs",
               "ToolTip": "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler\\GmxObject.cs",
               "RelativeToolTip": "GMS 1.4 Decompiler\\GmxObject.cs",
-              "ViewState": "AgIAAIsAAAAAAAAAAAAkwPwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T02:23:55.01Z"
+              "WhenOpened": "2026-03-18T02:23:55.01Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "GmxRoom.cs",
               "DocumentMoniker": "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler\\GmxRoom.cs",
               "RelativeDocumentMoniker": "GMS 1.4 Decompiler\\GmxRoom.cs",
               "ToolTip": "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler\\GmxRoom.cs",
               "RelativeToolTip": "GMS 1.4 Decompiler\\GmxRoom.cs",
-              "ViewState": "AgIAAJUBAAAAAAAAAAAiwNoBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T02:22:18.055Z"
+              "WhenOpened": "2026-03-18T02:22:18.055Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "GmxProject.cs",
               "DocumentMoniker": "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler\\GmxProject.cs",
               "RelativeDocumentMoniker": "GMS 1.4 Decompiler\\GmxProject.cs",
               "ToolTip": "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler\\GmxProject.cs",
               "RelativeToolTip": "GMS 1.4 Decompiler\\GmxProject.cs",
-              "ViewState": "AgIAAH8BAAAAAAAAAAAUwIYBAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-18T02:20:22.888Z"
+              "WhenOpened": "2026-03-18T02:20:22.888Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "GmxSprite.cs",
               "DocumentMoniker": "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler\\GmxSprite.cs",
               "RelativeDocumentMoniker": "GMS 1.4 Decompiler\\GmxSprite.cs",
               "ToolTip": "C:\\Users\\Owner\\Documents\\GitHub\\GMS14-Decompiler\\GMS 1.4 Decompiler\\GMS 1.4 Decompiler\\GmxSprite.cs",
               "RelativeToolTip": "GMS 1.4 Decompiler\\GmxSprite.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-18T02:15:28.663Z",
               "EditorCaption": ""
