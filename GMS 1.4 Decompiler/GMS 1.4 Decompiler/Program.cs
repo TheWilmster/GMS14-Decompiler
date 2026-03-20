@@ -14,6 +14,7 @@ using UndertaleModLib.Decompiler;
 using UndertaleModLib.Models;
 using UndertaleModLib.Util;
 using static System.Net.Mime.MediaTypeNames;
+using static UndertaleModLib.Models.UndertaleGeneralInfo;
 
 public class DecompilerConfig
 {
@@ -28,7 +29,8 @@ public class DecompilerConfig
     public bool exportFonts { get; set; }
     public bool exportObjects { get; set; }
     public bool exportRooms { get; set; }
-    public bool exportProjectAndIncludedFiles { get; set; }
+    public bool exportIncludedFiles { get; set; }
+    public bool exportProject { get; set;  }
     public DecompilerConfig()
     {
         dataFilePath = "C:\\Users\\wcoop\\Documents\\pizzatowerdemobuildspublic\\Public\\pizzatowerearlybuildtest_v211\\data.win";
@@ -42,7 +44,8 @@ public class DecompilerConfig
         exportFonts = true;
         exportObjects = true;
         exportRooms = true;
-        exportProjectAndIncludedFiles = true;
+        exportIncludedFiles = false;
+        exportProject = true;
     }
 }
 
@@ -61,9 +64,12 @@ static class Program
 {
     static void Main(string[] args)
     {
+        Console.Write("\x1b[?7l"); // fuck off windows
         string configPath = String.Concat(AppDomain.CurrentDomain.BaseDirectory, "DecompilerConfiguration.json");
         DecompilerConfig? config;
-        Console.WriteLine("   ____    __  __    ____            _      _  _         ____  U _____ u   ____   U  ___ u  __  __    ____              _     U _____ u   ____     \r\nU /\"___|uU|' \\/ '|u / __\"| u        /\"|    | ||\"|       |  _\"\\ \\| ___\"|/U /\"___|   \\/\"_ \\/U|' \\/ '|uU|  _\"\\ u  ___     |\"|    \\| ___\"|/U |  _\"\\ u  \r\n\\| |  _ /\\| |\\/| |/<\\___ \\/       u | |u   | || |_     /| | | | |  _|\"  \\| | u     | | | |\\| |\\/| |/\\| |_) |/ |_\"_|  U | | u   |  _|\"   \\| |_) |/  \r\n | |_| |  | |  | |  u___) |        \\| |/   |__   _|    U| |_| |\\| |___   | |/__.-,_| |_| | | |  | |  |  __/    | |    \\| |/__  | |___    |  _ <    \r\n  \\____|  |_|  |_|  |____/>>        |_|   _  /|_|\\      |____/ u|_____|   \\____|\\_)-\\___/  |_|  |_|  |_|     U/| |\\u   |_____| |_____|   |_| \\_\\   \r\n  _)(|_  <<,-,,-.    )(  (__)     _//<,-,(\")u_|||_u      |||_   <<   >>  _// \\\\      \\\\   <<,-,,-.   ||>>_.-,_|___|_,-.//  \\\\  <<   >>   //   \\\\_  \r\n (__)__)  (./  \\.)  (__)         (__)(_/  \" (__)__)     (__)_) (__) (__)(__)(__)    (__)   (./  \\.) (__)__)\\_)-' '-(_/(_\")(\"_)(__) (__) (__)  (__) ");
+
+        string asciiLogo = "                                                                                                  \r\n                                                                                                  \r\n                                                                         #    ###                 \r\n  :###: #:  :#   ###:        ####:                                              #                 \r\n .#: .# ##  ## #   .#        #  :#.                                             #                 \r\n #:     ##..## #             #   :#  ###     ##:   ###   ## #   # ##   ###      #     ###    #:##:\r\n #      #:  :# # .           #    #    :#   #     #   #  #:#:#  #   #    #      #       :#   ##  #\r\n #   ## # ## #   ##          #    # #   #  #.     #   #  # # #  #   #    #      #    #   #   #    \r\n #    # # #  #      #        #    # #####  #      #   #  # # #  #   #    #      #    #####   #    \r\n #:   # #    #      #        #   :# #      #.     #   #  # # #  #   #    #      #    #       #    \r\n :#. .# #    # #.   #        #  :#.     #   #     #   #  # # #  #   #    #      #.       #   #    \r\n  :###: #    # :####.        ####:   ###:    ##:   ###   # # #  # ##   #####    :##   ###:   #    \r\n                                                                #                                 \r\n                                                                #                                 \r\n                                                                #                                 ";
+        Console.WriteLine(asciiLogo);
         if (File.Exists(configPath))
         {
             Console.WriteLine("Reading config file...");
@@ -85,44 +91,106 @@ static class Program
 
         Decompiler decompiler = new Decompiler();
         decompiler.LoadDataFile(config.dataFilePath);
+        Console.WriteLine(String.Concat("Game: ", decompiler.GameData.GeneralInfo.DisplayName.Content, " (", decompiler.GameData.GeneralInfo.Name.Content, ")"));
 
         var (_, startingLine) = Console.GetCursorPosition();
-        Console.WriteLine(String.Concat("  [", config.exportSprites ? "X" "] Dump Sprites (Count: ", decompiler.GameData.Sprites.Count, ")"));
-        Console.WriteLine(String.Concat("  [ ] Dump Sounds (Count: ", decompiler.GameData.Sounds.Count, ")"));
-        Console.WriteLine(String.Concat("  [ ] Dump Backgrounds (Count: ", decompiler.GameData.Backgrounds.Count, ")"));
-        Console.WriteLine(String.Concat("  [ ] Dump Paths (Count: ", decompiler.GameData.Paths.Count, ")"));
-        Console.WriteLine(String.Concat("  [ ] Dump Scripts (Count: ", decompiler.GameData.Scripts.Count, ")"));
-        Console.WriteLine(String.Concat("  [ ] Dump Shaders (Count: ", decompiler.GameData.Shaders.Count, ")"));
-        Console.WriteLine(String.Concat("  [ ] Dump Fonts (Count: ", decompiler.GameData.Fonts.Count, ")"));
-        Console.WriteLine(String.Concat("  [ ] Dump Objects (Count: ", decompiler.GameData.Objects.Count, ")"));
-        Console.WriteLine(String.Concat("  [ ] Dump Rooms (Count: ", decompiler.GameData.Rooms.Count, ")"));
-        Console.WriteLine(String.Concat("  [ ] Copy over Included Files (UNSAFE)");
+        Console.WriteLine(String.Concat("  [", config.exportSprites ? "X" : " ", "] Dump Sprites (Count: ", decompiler.GameData.Sprites.Count, ")"));
+        Console.WriteLine(String.Concat("  [", config.exportSounds ? "X" : " ", "] Dump Sounds (Count: ", decompiler.GameData.Sounds.Count, ")"));
+        Console.WriteLine(String.Concat("  [", config.exportBackgrounds ? "X" : " ", "] Dump Backgrounds (Count: ", decompiler.GameData.Backgrounds.Count, ")"));
+        Console.WriteLine(String.Concat("  [", config.exportPaths ? "X" : " ", "] Dump Paths (Count: ", decompiler.GameData.Paths.Count, ")"));
+        Console.WriteLine(String.Concat("  [", config.exportScripts ? "X" : " ", "] Dump Scripts (Count: ", decompiler.GameData.Scripts.Count, ")"));
+        Console.WriteLine(String.Concat("  [", config.exportShaders ? "X" : " ", "] Dump Shaders (Count: ", decompiler.GameData.Shaders.Count, ")"));
+        Console.WriteLine(String.Concat("  [", config.exportFonts ? "X" : " ", "] Dump Fonts (Count: ", decompiler.GameData.Fonts.Count, ")"));
+        Console.WriteLine(String.Concat("  [", config.exportObjects ? "X" : " ", "] Dump Objects (Count: ", decompiler.GameData.GameObjects.Count, ")"));
+        Console.WriteLine(String.Concat("  [", config.exportRooms ? "X" : " ", "] Dump Rooms (Count: ", decompiler.GameData.Rooms.Count, ")"));
+        Console.WriteLine(String.Concat("  [", config.exportProject ? "X" : " ", "] Dump Project File"));
+        Console.WriteLine(String.Concat("  [", config.exportIncludedFiles ? "X" : " ", "] Copy over Included Files (UNSAFE)"));
+        Console.WriteLine("Press \"Space\" to toggle. Press \"Enter\" to confirm changes.");
+        var (_, endingLine) = Console.GetCursorPosition();
 
         bool confirm = false;
         int select = 0;
+        Console.SetCursorPosition(0, startingLine);
         while (!confirm)
         {
             ConsoleKeyInfo keyInfo = Console.ReadKey();
             int oldSelect = select;
             select += keyInfo.Key == ConsoleKey.DownArrow ? 1 : keyInfo.Key == ConsoleKey.UpArrow ? -1 : 0;
-            select = int.Clamp(select, 0, 8);
-            if (oldSelect != select)
-            {
-                Console.WriteLine("  ");
-            }
-            Console.SetCursorPosition(3, startingLine + select);
-            Console.WriteLine("->");
+            select = int.Clamp(select, 0, 10);
+            Console.SetCursorPosition(0, startingLine + oldSelect);
+            Console.Write("  ");
+            Console.SetCursorPosition(0, startingLine + select);
+            Console.Write("->");
 
             if (keyInfo.Key == ConsoleKey.Spacebar)
             {
+                bool value = false;
                 switch (select)
                 {
                     case 0:
                         config.exportSprites = !config.exportSprites;
+                        value = config.exportSprites;
+                        break;
+                    case 1:
+                        config.exportSounds = !config.exportSounds;
+                        value = config.exportSounds;
+                        break;
+                    case 2:
+                        config.exportBackgrounds = !config.exportBackgrounds;
+                        value = config.exportBackgrounds;
+                        break;
+                    case 3:
+                        config.exportPaths = !config.exportPaths;
+                        value = config.exportPaths;
+                        break;
+                    case 4:
+                        config.exportScripts = !config.exportScripts;
+                        value = config.exportScripts;
+                        break;
+                    case 5:
+                        config.exportShaders = !config.exportShaders;
+                        value = config.exportShaders;
+                        break;
+                    case 6:
+                        config.exportFonts = !config.exportFonts;
+                        value = config.exportFonts;
+                        break;
+                    case 7:
+                        config.exportObjects = !config.exportObjects;
+                        value = config.exportObjects;
+                        break;
+                    case 8:
+                        config.exportRooms = !config.exportRooms;
+                        value = config.exportRooms;
+                        break;
+                    case 9:
+                        config.exportProject = !config.exportProject;
+                        value = config.exportProject;
+                        break;
+                    case 10:
+                        config.exportIncludedFiles = !config.exportIncludedFiles;
+                        value = config.exportIncludedFiles;
                         break;
                 }
+                Console.SetCursorPosition(0, startingLine + select);
+                Console.Write("->[");
+                Console.Write(value ? "X" : " ");
+                Console.Write("]");
+                Console.SetCursorPosition(0, startingLine + select);
+            }
+
+            if (keyInfo.Key == ConsoleKey.Enter)
+            {
+                Console.SetCursorPosition(0, startingLine);
+                break;
             }
         }
+
+        for (int i = 0; i < 12; i++)
+        {
+            Console.WriteLine("\x1b[2K");
+        }
+        Console.SetCursorPosition(0, startingLine);
 
         if (config.exportSounds) decompiler.DumpSounds();
         if (config.exportSprites) decompiler.DumpSprites();
@@ -133,11 +201,8 @@ static class Program
         if (config.exportFonts) decompiler.DumpFonts();
         if (config.exportObjects) decompiler.DumpObjects();
         if (config.exportRooms) decompiler.DumpRooms();
-        if (config.exportProjectAndIncludedFiles)
-        {
-            decompiler.DumpIncludedFiles();
-            decompiler.DumpProjectFile();
-        }
+        if (config.exportIncludedFiles) decompiler.DumpIncludedFiles();
+        if (config.exportProject) decompiler.DumpProjectFile();
     }
 }
 
@@ -172,20 +237,18 @@ public class Decompiler
         int i = 0;
         foreach (UndertaleSprite sprite in GameData.Sprites)
         {
-            var (_, row) = Console.GetCursorPosition();
-            Console.WriteLine("                                                                                                                             ");
-            Console.SetCursorPosition(0, row);
-
-            (_, row) = Console.GetCursorPosition();
-            Console.WriteLine(String.Concat(
+            Console.Write("\x1b[2K");
+            Console.SetCursorPosition(0, Console.CursorTop);
+            Console.Write(String.Concat(
                 "(", i + 1, "/", GameData.Sprites.Count, ") Dumping ", sprite.Name.Content, "..."
             ));
-            Console.SetCursorPosition(0, row);
 
             DumpSprite(sprite);
             i++;
         }
-        Console.WriteLine("Sprites done!                                                                                                                    ");
+        Console.Write("\x1b[2K");
+        Console.SetCursorPosition(0, Console.CursorTop);
+        Console.WriteLine(" - Sprites done!");
     }
 
     public void DumpScripts()
@@ -194,20 +257,18 @@ public class Decompiler
         int i = 0;
         foreach (UndertaleScript script in GameData.Scripts)
         {
-            var (_, row) = Console.GetCursorPosition();
-            Console.WriteLine("                                                                                                                             ");
-            Console.SetCursorPosition(0, row);
-
-            (_, row) = Console.GetCursorPosition();
-            Console.WriteLine(String.Concat(
+            Console.Write("\x1b[2K");
+            Console.SetCursorPosition(0, Console.CursorTop);
+            Console.Write(String.Concat(
                 "(", i + 1, "/", GameData.Scripts.Count, ") Dumping ", script.Name.Content, "..."
             ));
-            Console.SetCursorPosition(0, row);
 
             DumpScript(script);
             i++;
         }
-        Console.WriteLine("Scripts done!                                                                                                                    ");
+        Console.Write("\x1b[2K");
+        Console.SetCursorPosition(0, Console.CursorTop);
+        Console.WriteLine(" - Scripts done!");
     }
 
     public void DumpSounds(bool getExternalSoundNamesOnly = false)
@@ -218,21 +279,21 @@ public class Decompiler
         {
             if (!getExternalSoundNamesOnly)
             {
-                var (_, row) = Console.GetCursorPosition();
-                Console.WriteLine("                                                                                                                             ");
-                Console.SetCursorPosition(0, row);
-
-                (_, row) = Console.GetCursorPosition();
-                Console.WriteLine(String.Concat(
+                Console.Write("\x1b[2K");
+                Console.SetCursorPosition(0, Console.CursorTop);
+                Console.Write(String.Concat(
                     "(", i + 1, "/", GameData.Sounds.Count, ") Dumping ", sound.Name.Content, "..."
                 ));
-                Console.SetCursorPosition(0, row);
             }
             DumpSound(sound);
             i++;
         }
         if (!getExternalSoundNamesOnly)
-        Console.WriteLine("Sounds done!                                                                                                                     ");
+        {
+            Console.Write("\x1b[2K");
+            Console.SetCursorPosition(0, Console.CursorTop);
+            Console.WriteLine(" - Sounds done!");
+        }
     }
 
     public void DumpBackgrounds()
@@ -241,20 +302,18 @@ public class Decompiler
         int i = 0;
         foreach (UndertaleBackground background in GameData.Backgrounds)
         {
-            var (_, row) = Console.GetCursorPosition();
-            Console.WriteLine("                                                                                                                             ");
-            Console.SetCursorPosition(0, row);
-
-            (_, row) = Console.GetCursorPosition();
-            Console.WriteLine(String.Concat(
+            Console.Write("\x1b[2K");
+            Console.SetCursorPosition(0, Console.CursorTop);
+            Console.Write(String.Concat(
                 "(", i + 1, "/", GameData.Backgrounds.Count, ") Dumping ", background.Name.Content, "..."
             ));
-            Console.SetCursorPosition(0, row);
 
             DumpBackground(background);
             i++;
         }
-        Console.WriteLine("Backgrounds done!                                                                                                                ");
+        Console.Write("\x1b[2K");
+        Console.SetCursorPosition(0, Console.CursorTop);
+        Console.WriteLine(" - Backgrounds done!");
     }
 
     public void DumpPaths()
@@ -263,20 +322,18 @@ public class Decompiler
         int i = 0;
         foreach (UndertalePath path in GameData.Paths)
         {
-            var (_, row) = Console.GetCursorPosition();
-            Console.WriteLine("                                                                                                                             ");
-            Console.SetCursorPosition(0, row);
-
-            (_, row) = Console.GetCursorPosition();
-            Console.WriteLine(String.Concat(
+            Console.Write("\x1b[2K");
+            Console.SetCursorPosition(0, Console.CursorTop);
+            Console.Write(String.Concat(
                 "(", i + 1, "/", GameData.Paths.Count, ") Dumping ", path.Name.Content, "..."
             ));
-            Console.SetCursorPosition(0, row);
 
             DumpPath(path);
             i++;
         }
-        Console.WriteLine("Paths done!                                                                                                                      ");
+        Console.Write("\x1b[2K");
+        Console.SetCursorPosition(0, Console.CursorTop);
+        Console.WriteLine(" - Paths done!");
     }
 
     public void DumpShaders()
@@ -285,20 +342,18 @@ public class Decompiler
         int i = 0;
         foreach (UndertaleShader shader in GameData.Shaders)
         {
-            var (_, row) = Console.GetCursorPosition();
-            Console.WriteLine("                                                                                                                             ");
-            Console.SetCursorPosition(0, row);
-
-            (_, row) = Console.GetCursorPosition();
-            Console.WriteLine(String.Concat(
+            Console.Write("\x1b[2K");
+            Console.SetCursorPosition(0, Console.CursorTop);
+            Console.Write(String.Concat(
                 "(", i + 1, "/", GameData.Shaders.Count, ") Dumping ", shader.Name.Content, "..."
             ));
-            Console.SetCursorPosition(0, row);
 
             DumpShader(shader);
             i++;
         }
-        Console.WriteLine("Shaders done!                                                                                                                    ");
+        Console.Write("\x1b[2K");
+        Console.SetCursorPosition(0, Console.CursorTop);
+        Console.WriteLine(" - Shaders done!");
     }
 
     public void DumpFonts()
@@ -307,20 +362,18 @@ public class Decompiler
         int i = 0;
         foreach (UndertaleFont font in GameData.Fonts)
         {
-            var (_, row) = Console.GetCursorPosition();
-            Console.WriteLine("                                                                                                                             ");
-            Console.SetCursorPosition(0, row);
-
-            (_, row) = Console.GetCursorPosition();
-            Console.WriteLine(String.Concat(
+            Console.Write("\x1b[2K");
+            Console.SetCursorPosition(0, Console.CursorTop);
+            Console.Write(String.Concat(
                 "(", i + 1, "/", GameData.Fonts.Count, ") Dumping ", font.Name.Content, "..."
             ));
-            Console.SetCursorPosition(0, row);
 
             DumpFont(font);
             i++;
         }
-        Console.WriteLine("Fonts done!                                                                                                                      ");
+        Console.Write("\x1b[2K");
+        Console.SetCursorPosition(0, Console.CursorTop);
+        Console.WriteLine(" - Fonts done!");
     }
 
     public void DumpObjects()
@@ -329,20 +382,18 @@ public class Decompiler
         int i = 0;
         foreach (UndertaleGameObject gameObject in GameData.GameObjects)
         {
-            var (_, row) = Console.GetCursorPosition();
-            Console.WriteLine("                                                                                                                             ");
-            Console.SetCursorPosition(0, row);
-
-            (_, row) = Console.GetCursorPosition();
-            Console.WriteLine(String.Concat(
+            Console.Write("\x1b[2K");
+            Console.SetCursorPosition(0, Console.CursorTop);
+            Console.Write(String.Concat(
                 "(", i + 1, "/", GameData.GameObjects.Count, ") Dumping ", gameObject.Name.Content, "..."
             ));
-            Console.SetCursorPosition(0, row);
 
             DumpObject(gameObject);
             i++;
         }
-        Console.WriteLine("Objects done!                                                                                                                    ");
+        Console.Write("\x1b[2K");
+        Console.SetCursorPosition(0, Console.CursorTop);
+        Console.WriteLine(" - Objects done!");
     }
     public void DumpRooms()
     {
@@ -350,20 +401,18 @@ public class Decompiler
         int i = 0;
         foreach (UndertaleRoom room in GameData.Rooms)
         {
-            var (_, row) = Console.GetCursorPosition();
-            Console.WriteLine("                                                                                                                             ");
-            Console.SetCursorPosition(0, row);
-
-            (_, row) = Console.GetCursorPosition();
-            Console.WriteLine(String.Concat(
+            Console.Write("\x1b[2K");
+            Console.SetCursorPosition(0, Console.CursorTop);
+            Console.Write(String.Concat(
                 "(", i + 1, "/", GameData.Rooms.Count, ") Dumping ", room.Name.Content, "..."
             ));
-            Console.SetCursorPosition(0, row);
 
             DumpRoom(room);
             i++;
         }
-        Console.WriteLine("Rooms done!                                                                                                                      ");
+        Console.Write("\x1b[2K");
+        Console.SetCursorPosition(0, Console.CursorTop);
+        Console.WriteLine(" - Rooms done!");
     }
 
     public void DumpIncludedFiles()
@@ -380,15 +429,11 @@ public class Decompiler
         int i = 0;
         foreach (string file in filteredFiles)
         {
-            var (_, row) = Console.GetCursorPosition();
-            Console.WriteLine("                                                                                                                             ");
-            Console.SetCursorPosition(0, row);
-
-            (_, row) = Console.GetCursorPosition();
-            Console.WriteLine(String.Concat(
+            Console.Write("\x1b[2K");
+            Console.SetCursorPosition(0, Console.CursorTop);
+            Console.Write(String.Concat(
                 "(", i + 1, "/", filteredFiles.Count, ") Copying ", file, "..."
             ));
-            Console.SetCursorPosition(0, row);
 
             string sourcePath = Path.Combine(Path.GetDirectoryName(GamePath), file);
             string destPath = Path.Combine(datafilesPath, file);
@@ -396,7 +441,9 @@ public class Decompiler
             i++;
         }
         datafilesCopied = true;
-        Console.WriteLine("Included files done!                                                                                                             ");
+        Console.Write("\x1b[2K");
+        Console.SetCursorPosition(0, Console.CursorTop);
+        Console.WriteLine(" - Included files done!");
     }
 
     public List<string> GetIncludedFiles()
