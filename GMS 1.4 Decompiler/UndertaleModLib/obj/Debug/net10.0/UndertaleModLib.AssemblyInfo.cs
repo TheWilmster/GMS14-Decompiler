@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyCopyrightAttribute("Copyright ©  2018-2026, licensed under GPLv3")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("0.8.4.1")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5b70b2bc70099ca25f41e767e685e0116b14357e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2654cbd4e46b7621e02bbac9c204eeae23b1bc71")]
 [assembly: System.Reflection.AssemblyProductAttribute("UndertaleModLib")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UndertaleModLib")]
 [assembly: System.Reflection.AssemblyVersionAttribute("0.8.4.1")]

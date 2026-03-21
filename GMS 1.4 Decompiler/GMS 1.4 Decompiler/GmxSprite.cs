@@ -82,6 +82,7 @@ public class GmxAssetSprite
         collisionTolerance = 0;
         collisionMaskType = resource.SepMasks switch
         {
+            UndertaleSprite.SepMaskType.RotatedRect => -1,
             UndertaleSprite.SepMaskType.AxisAlignedRect => -1,
             UndertaleSprite.SepMaskType.Precise => 0,
         };

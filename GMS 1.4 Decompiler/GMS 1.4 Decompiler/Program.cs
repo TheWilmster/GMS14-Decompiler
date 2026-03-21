@@ -1,5 +1,6 @@
 ﻿using FFMpegCore;
 using ICSharpCode.SharpZipLib.Zip.Compression.Streams;
+using System.Diagnostics;
 using System.IO;
 using System.Net.Security;
 using System.Runtime.CompilerServices;
@@ -182,6 +183,10 @@ static class Program
             if (keyInfo.Key == ConsoleKey.Enter)
             {
                 Console.SetCursorPosition(0, startingLine);
+                File.WriteAllText(configPath, JsonSerializer.Serialize(config, new JsonSerializerOptions()
+                {
+                    WriteIndented = true
+                }));
                 break;
             }
         }
@@ -203,6 +208,10 @@ static class Program
         if (config.exportRooms) decompiler.DumpRooms();
         if (config.exportIncludedFiles) decompiler.DumpIncludedFiles();
         if (config.exportProject) decompiler.DumpProjectFile();
+        ProcessStartInfo info = new ProcessStartInfo();
+        info.FileName = @"c:\windows\explorer.exe";
+        info.Arguments = decompiler.DecompilePath;
+        Process.Start(info);
     }
 }
 
@@ -243,7 +252,10 @@ public class Decompiler
                 "(", i + 1, "/", GameData.Sprites.Count, ") Dumping ", sprite.Name.Content, "..."
             ));
 
-            DumpSprite(sprite);
+            if (sprite.Textures?[0].Texture != null)
+            {
+                DumpSprite(sprite);
+            }
             i++;
         }
         Console.Write("\x1b[2K");
@@ -534,7 +546,7 @@ public class Decompiler
             }
             externalSoundNames ??= new List<string>();
 
-            if (!resource.Flags.HasFlag(UndertaleSound.AudioEntryFlags.IsEmbedded))
+            if (!sound.actuallyEmbedded)
             {
                 string filename = resource.File.Content;
                 if (!filename.Contains('.'))
@@ -553,7 +565,7 @@ public class Decompiler
             }
             else if (!getExternalSoundNamesOnly)
             {
-                File.WriteAllBytes(String.Concat(audioFilesPath, resource.Name.Content, sound.extension), GetAudioData(resource));
+                File.WriteAllBytes(String.Concat(audioFilesPath, resource.Name.Content, sound.extension), GetAudioData(resource, sound.actuallyEmbedded));
             }
 
             if (!getExternalSoundNamesOnly)
@@ -814,10 +826,10 @@ public class Decompiler
         return data.EmbeddedAudio;
     }
 
-    public byte[] GetAudioData(UndertaleSound resource)
+    public byte[] GetAudioData(UndertaleSound resource, bool embedded)
     {
         byte[] soundData = System.Convert.FromBase64String("UklGRiQAAABXQVZFZm10IBAAAAABAAIAQB8AAAB9AAAEABAAZGF0YQAAAAA=");
-        if (resource.Flags.HasFlag(UndertaleSound.AudioEntryFlags.IsEmbedded))
+        if (embedded)
         {
             if (resource.AudioFile != null)
             {

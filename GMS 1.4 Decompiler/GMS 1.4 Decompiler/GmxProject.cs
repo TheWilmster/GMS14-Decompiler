@@ -92,12 +92,18 @@ public class GmxAssetProject
 
         foreach (UndertaleSprite sprite in decompiler.GameData.Sprites)
         {
-            sprites.sprites.Add(String.Concat("sprites\\", sprite.Name.Content));
+            if (sprite.Textures?[0].Texture != null)
+            {
+                sprites.sprites.Add(String.Concat("sprites\\", sprite.Name.Content));
+            }
         }
 
         foreach (UndertaleBackground background in decompiler.GameData.Backgrounds)
         {
-            backgrounds.backgrounds.Add(String.Concat("background\\", background.Name.Content));
+            if (background.Texture != null)
+            {
+                backgrounds.backgrounds.Add(String.Concat("background\\", background.Name.Content));
+            }
         }
 
         foreach (UndertalePath path in decompiler.GameData.Paths)

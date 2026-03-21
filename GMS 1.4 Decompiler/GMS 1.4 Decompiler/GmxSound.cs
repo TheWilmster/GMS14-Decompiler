@@ -65,12 +65,34 @@ public class GmxAssetSound
     [XmlElement("audioGroup")]
     public int audioGroup { get; set; }
 
+    [XmlIgnore]
+    public bool actuallyEmbedded { get; set; }
+
     public GmxAssetSound() { }
 
     public GmxAssetSound(UndertaleSound resource, Decompiler decompiler)
     {
         kind = 0;
-        extension = resource.Type.Content;
+        actuallyEmbedded = true;
+        extension = ".ogg";
+        if (resource.Flags.HasFlag(UndertaleSound.AudioEntryFlags.IsEmbedded) && !resource.Flags.HasFlag(UndertaleSound.AudioEntryFlags.IsCompressed))
+        {
+            extension = ".wav";
+        }
+        else if (resource.Flags.HasFlag(UndertaleSound.AudioEntryFlags.IsCompressed) && !resource.Flags.HasFlag(UndertaleSound.AudioEntryFlags.IsEmbedded))
+        {
+            extension = ".ogg";
+        }
+        else if (resource.Flags.HasFlag(UndertaleSound.AudioEntryFlags.IsCompressed) && resource.Flags.HasFlag(UndertaleSound.AudioEntryFlags.IsEmbedded))
+        {
+            extension = ".ogg";
+        }
+        else if (!resource.Flags.HasFlag(UndertaleSound.AudioEntryFlags.IsCompressed) && !resource.Flags.HasFlag(UndertaleSound.AudioEntryFlags.IsEmbedded))
+        {
+            extension = ".ogg";
+
+            actuallyEmbedded = false;
+        }
         path = String.Concat("sound\\audio\\", resource.Name.Content, extension);
         effects = resource.Effects;
         volume = new GmxSoundVolume()
@@ -85,19 +107,31 @@ public class GmxAssetSound
         streamed = -Convert.ToInt32(!resource.Flags.HasFlag(UndertaleSound.AudioEntryFlags.IsEmbedded));
         uncompressOnLoad = -Convert.ToInt32(resource.Flags.HasFlag(UndertaleSound.AudioEntryFlags.IsDecompressedOnLoad));
 
-        byte[] soundData = decompiler.GetAudioData(resource);
+        byte[] soundData = decompiler.GetAudioData(resource, actuallyEmbedded);
 
-        MemoryStream stream = new MemoryStream(soundData);
-        IMediaAnalysis info = FFProbe.Analyse(stream);
+        try
+        {
+            MemoryStream stream = new MemoryStream(soundData);
+            IMediaAnalysis info = FFProbe.Analyse(stream);
 
-        bitRates.bitRate = (long?)info.PrimaryAudioStream.BitRate ?? 320000;
-        bitRates.bitRate /= 1000;
-        sampleRates = new();
-        sampleRates.sampleRate = info.PrimaryAudioStream.SampleRateHz;
+            bitRates.bitRate = (long?)info.PrimaryAudioStream.BitRate ?? 320000;
+            bitRates.bitRate /= 1000;
+            sampleRates = new();
+            sampleRates.sampleRate = info.PrimaryAudioStream.SampleRateHz;
+            bitDepths = new();
+            bitDepths.bitDepth = info.PrimaryAudioStream.BitDepth ?? 16;
+        }
+        catch (Exception gurt)
+        {
+            bitRates.bitRate = 320;
+            sampleRates = new();
+            sampleRates.sampleRate = 192000;
+            bitDepths = new();
+            bitDepths.bitDepth = 16;
+        }
+        
         types = new();
         types.type = 0;
-        bitDepths = new();
-        bitDepths.bitDepth = info.PrimaryAudioStream.BitDepth ?? 16;
         audioGroup = resource.GroupID;
     }
 }
